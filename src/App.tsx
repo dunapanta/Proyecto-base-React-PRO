@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navigation } from "./routers/navigation";
+import { Navigation } from "./routers/Navigation";
 
 function App() {
   return (
