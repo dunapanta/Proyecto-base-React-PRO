@@ -21,3 +21,6 @@ const Lazy3 = lazy(() => import("../01-lazy-load/pages/LazyPage3"));
 ## Clase 40 Cambiar nombre de chunks
 - `const Lazy1 = lazy(() => import(/* webpackChunkName: "LazyPage1" */ "../01-lazy-load/pages/LazyPage1"));`
 - Es útil para manejar estrategias de cache, o para sacar estadisticas
+
+## Clase 41 Lazy Load rutas anidadas
+- Se pone rutas para que formen parte del mismo chunk
