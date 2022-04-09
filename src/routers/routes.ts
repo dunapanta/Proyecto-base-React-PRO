@@ -18,8 +18,8 @@ const Lazy3 = lazy(() => import(/* webpackChunkName: "LazyPage3" */ "../01-lazy-
 
 export const routes: Route[] = [
   {
-    to: "/lazy1",
-    path: "lazy1",
+    to: "/lazyload",
+    path: "/lazyload/*", //Todas las rutas que pasen por lazyload sean procesadas en este path
     Component: LazyLayout,
     name: "LazyLayout",
   },

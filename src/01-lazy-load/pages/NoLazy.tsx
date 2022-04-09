@@ -3,7 +3,7 @@ import React from "react";
 export const NoLazy = () => {
   return (
     <div>
-      <h1>No Lazy Layout Page</h1>
+      <h1>No Lazyload Page</h1>
     </div>
   );
 };
