@@ -1,0 +1,15 @@
+## Clase 61 Compound Component Patern (MUI)
+- Compound components are a React pattern that provides an expressive and flexible way for a parent component to communicate with its children, while expressively separating logic and UI.
+- In compound components instead of passing state through props, we pass elements as children to a parent element.
+
+- Un ejemplo es el select si se quiere agregar o quitar opciones se lo hace con option
+
+```
+<select name="cars" id="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+
+```
