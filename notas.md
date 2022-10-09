@@ -2,6 +2,8 @@
 - Compound components are a React pattern that provides an expressive and flexible way for a parent component to communicate with its children, while expressively separating logic and UI.
 - In compound components instead of passing state through props, we pass elements as children to a parent element.
 
+- Tener el componente padre que reciba los elementos hijos y los renderice.
+
 - Un ejemplo es el select si se quiere agregar o quitar opciones se lo hace con option
 
 ```
