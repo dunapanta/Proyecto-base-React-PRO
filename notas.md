@@ -15,3 +15,11 @@
 </select>
 
 ```
+
+
+## Clase 71 Extensibles Styles Pattern
+- El patrón de estilos extensibles es una forma de crear componentes que pueden ser estilizados por el usuario de la librería.
+
+## Clase 72 Agregando classnames
+-  defino `custom-styles.css` y lo importo
+- Agrego className como prop opcional
