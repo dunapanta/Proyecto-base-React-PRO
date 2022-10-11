@@ -39,7 +39,20 @@ export const ShoppingPage = () => {
     count: number;
     product: Product;
   }) => {
-    console.log("onProductCountChange", count, product);
+    //console.log("onProductCountChange", count, product);
+    setShoppingCart((prev) => {
+      if (count === 0) {
+        const { [product.id]: _, ...rest } = prev;
+        return rest;
+      }
+      return {
+        ...prev,
+        [product.id]: {
+          ...product,
+          count,
+        },
+      };
+    })
   };
 
   return (
@@ -81,6 +94,13 @@ export const ShoppingPage = () => {
           </ProductCard>
         </div>
       </div>
+
+          <div>
+            <code>
+              <pre>{JSON.stringify(shoppingCart, null, 5)}</pre>
+            </code>
+          </div>
+
     </div>
   );
 };
