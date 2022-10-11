@@ -27,3 +27,6 @@
 # Clase 81 Controll Props
 - Controlar el estado interno y la emisión de eventos de un componente.
 - Ejemplo input donde se puede controlar el valor del input y el onChange
+
+# Clase 84 Definir onChange 
+- Especificar el evento que se va a emitir cuando cambia el valor del input

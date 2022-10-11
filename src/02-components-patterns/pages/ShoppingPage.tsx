@@ -32,6 +32,10 @@ export const ShoppingPage = () => {
     [key: string]: ProductInCart;
   }>({});
 
+  const onProductCountChange = () => {
+    console.log("onProductCountChange");
+  };
+
   return (
     <div>
       <h1>ShoppingPage</h1>
@@ -39,7 +43,12 @@ export const ShoppingPage = () => {
 
       <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
         {products.map((product) => (
-          <ProductCard key={product.id} className="bg-dark" product={product}>
+          <ProductCard
+            key={product.id}
+            className="bg-dark"
+            product={product}
+            onChange={() => onProductCountChange()}
+          >
             <ProductImage className="custom-image" />
             <ProductTitle className="text-white" title={"Coffee"} />
             <ProductButtons className="custom-buttons" />
@@ -51,6 +60,7 @@ export const ShoppingPage = () => {
             className="bg-dark"
             product={product2}
             style={{ width: "100px" }}
+            onChange={() => onProductCountChange()}
           >
             <ProductImage className="custom-image" />
             <ProductButtons className="custom-buttons" />
