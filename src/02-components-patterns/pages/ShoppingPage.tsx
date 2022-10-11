@@ -52,7 +52,7 @@ export const ShoppingPage = () => {
           count,
         },
       };
-    })
+    });
   };
 
   return (
@@ -75,32 +75,26 @@ export const ShoppingPage = () => {
         ))}
 
         <div className="shopping-card">
-          <ProductCard
-            className="bg-dark"
-            product={product2}
-            style={{ width: "100px" }}
-          >
-            <ProductImage className="custom-image" />
-            <ProductButtons className="custom-buttons" />
-          </ProductCard>
-
-          <ProductCard
-            className="bg-dark"
-            product={product1}
-            style={{ width: "100px" }}
-          >
-            <ProductImage className="custom-image" />
-            <ProductButtons className="custom-buttons" />
-          </ProductCard>
+          {shoppingCart &&
+            Object.values(shoppingCart).map((product) => (
+              <ProductCard
+                key={product.id}
+                className="bg-dark"
+                product={product}
+                style={{ width: "100px" }}
+              >
+                <ProductImage className="custom-image" />
+                <ProductButtons className="custom-buttons" />
+              </ProductCard>
+            ))}
         </div>
       </div>
 
-          <div>
-            <code>
-              <pre>{JSON.stringify(shoppingCart, null, 5)}</pre>
-            </code>
-          </div>
-
+      <div>
+        <code>
+          <pre>{JSON.stringify(shoppingCart, null, 5)}</pre>
+        </code>
+      </div>
     </div>
   );
 };
