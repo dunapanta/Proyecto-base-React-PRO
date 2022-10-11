@@ -4,10 +4,11 @@ import {
   ProductButtons,
   ProductCard,
 } from "../components";
+import { Product } from "../interfaces/interfaces";
 
 import "../styles/custom-styles.css";
 
-const product = {
+const product1 = {
   id: "1",
   title: "Coffee Mug - Card",
   img: "../../../public/coffee-mug.png",
@@ -19,6 +20,8 @@ const product2 = {
   img: "../../../public/coffee-mug2.png",
 };
 
+const products: Product[] = [product1, product2];
+
 export const ShoppingPage = () => {
   return (
     <div>
@@ -26,23 +29,33 @@ export const ShoppingPage = () => {
       <hr />
 
       <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
-        <ProductCard className="bg-dark" product={product}>
-          <ProductCard.Image className="custom-image" />
-          <ProductCard.Title className="text-white" title={"Coffee"} />
-          <ProductCard.Buttons className="custom-buttons" />
-        </ProductCard>
+        {products.map((product) => (
+          <ProductCard key={product.id} className="bg-dark" product={product}>
+            <ProductImage className="custom-image" />
+            <ProductTitle className="text-white" title={"Coffee"} />
+            <ProductButtons className="custom-buttons" />
+          </ProductCard>
+        ))}
 
-        <ProductCard className="bg-dark" product={product2}>
-          <ProductImage className="custom-image" />
-          <ProductTitle className="text-white" title={"Coffee"} />
-          <ProductButtons className="custom-buttons" />
-        </ProductCard>
+        <div className="shopping-card">
+          <ProductCard
+            className="bg-dark"
+            product={product2}
+            style={{ width: "100px" }}
+          >
+            <ProductImage className="custom-image" />
+            <ProductButtons className="custom-buttons" />
+          </ProductCard>
 
-        {/* <ProductCard style={{ backgroundColor: "#4bf3f0" }} product={product}>
-          <ProductImage style={{ boxShadow: "10px 10px 10px rgba(0,0,0,0.2)"}} />
-          <ProductTitle title={"Coffee"} style={{ fontWeight: "bold" }} />
-          <ProductButtons style={{ display: "flex", justifyContent: "end" }} />
-        </ProductCard> */}
+          <ProductCard
+            className="bg-dark"
+            product={product1}
+            style={{ width: "100px" }}
+          >
+            <ProductImage className="custom-image" />
+            <ProductButtons className="custom-buttons" />
+          </ProductCard>
+        </div>
       </div>
     </div>
   );
