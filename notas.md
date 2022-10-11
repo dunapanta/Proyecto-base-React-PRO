@@ -23,3 +23,6 @@
 ## Clase 72 Agregando classnames
 -  defino `custom-styles.css` y lo importo
 - Agrego className como prop opcional
+
+# Clase 81 Controll Props
+- Controlar el estado interno y la emisión de eventos de un componente.

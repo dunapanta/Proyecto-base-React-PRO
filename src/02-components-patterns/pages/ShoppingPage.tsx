@@ -13,6 +13,12 @@ const product = {
   img: "../../../public/coffee-mug.png",
 };
 
+const product2 = {
+  id: "2",
+  title: "Coffee Mug - Meme",
+  img: "../../../public/coffee-mug2.png",
+};
+
 export const ShoppingPage = () => {
   return (
     <div>
@@ -26,17 +32,17 @@ export const ShoppingPage = () => {
           <ProductCard.Buttons className="custom-buttons" />
         </ProductCard>
 
-        <ProductCard className="bg-dark" product={product}>
+        <ProductCard className="bg-dark" product={product2}>
           <ProductImage className="custom-image" />
           <ProductTitle className="text-white" title={"Coffee"} />
           <ProductButtons className="custom-buttons" />
         </ProductCard>
 
-        <ProductCard style={{ backgroundColor: "#4bf3f0" }} product={product}>
+        {/* <ProductCard style={{ backgroundColor: "#4bf3f0" }} product={product}>
           <ProductImage style={{ boxShadow: "10px 10px 10px rgba(0,0,0,0.2)"}} />
           <ProductTitle title={"Coffee"} style={{ fontWeight: "bold" }} />
           <ProductButtons style={{ display: "flex", justifyContent: "end" }} />
-        </ProductCard>
+        </ProductCard> */}
       </div>
     </div>
   );
