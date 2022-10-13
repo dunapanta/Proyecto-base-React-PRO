@@ -1,76 +1,15 @@
-import { useState } from "react";
 import {
   ProductImage,
   ProductTitle,
   ProductButtons,
   ProductCard,
 } from "../components";
-import { Product } from "../interfaces/interfaces";
-
+import { useShoppingCart } from "../hooks/useShoppingCart";
+import { products } from "../data/products";
 import "../styles/custom-styles.css";
 
-const product1 = {
-  id: "1",
-  title: "Coffee Mug - Card",
-  img: "../../../public/coffee-mug.png",
-};
-
-const product2 = {
-  id: "2",
-  title: "Coffee Mug - Meme",
-  img: "../../../public/coffee-mug2.png",
-};
-
-const products: Product[] = [product1, product2];
-
-interface ProductInCart extends Product {
-  count: number;
-}
-
 export const ShoppingPage = () => {
-  const [shoppingCart, setShoppingCart] = useState<{
-    [key: string]: ProductInCart;
-  }>({});
-
-  const onProductCountChange = ({
-    count,
-    product,
-  }: {
-    count: number;
-    product: Product;
-  }) => {
-    //console.log("onProductCountChange", count, product);
-    setShoppingCart((prev) => {
-      const productInCart: ProductInCart = prev[product.id] || {
-        ...product,
-        count: 0,
-      };
-
-      if (Math.max(productInCart.count + count, 0) > 0) {
-        productInCart.count += count;
-        return {
-          ...prev,
-          [product.id]: productInCart,
-        };
-      }
-
-      //Borrar producto
-      const { [product.id]: _, ...rest } = prev;
-      return rest;
-
-      /*  if (count === 0) {
-        const { [product.id]: _, ...rest } = prev;
-        return rest;
-      }
-      return {
-        ...prev,
-        [product.id]: {
-          ...product,
-          count,
-        },
-      }; */
-    });
-  };
+  const { shoppingCart, onProductCountChange } = useShoppingCart();
 
   return (
     <div>
