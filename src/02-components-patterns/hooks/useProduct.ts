@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { InitialValues, onChangeArgs, Product } from "../interfaces/interfaces";
 
 interface useProductArgs {
@@ -15,10 +15,16 @@ export const useProduct = ({
   initialValues,
 }: useProductArgs) => {
   const [counter, setCounter] = useState<number>(initialValues?.count || value);
+  const isMounted = useRef(false);
 
   useEffect(() => {
+    if (!isMounted.current) return;
     setCounter(value);
   }, [value]);
+
+  useEffect(() => {
+    isMounted.current = true;
+  }, []);
 
   const increaseBy = (value: number) => {
     const newValue = Math.max(counter + value, 0);
