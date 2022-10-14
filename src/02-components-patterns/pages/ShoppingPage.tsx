@@ -21,11 +21,13 @@ export const ShoppingPage = () => {
         className="bg-dark"
         product={product}
       >
-        {() => (
+        {({reset}) => (
           <>
             <ProductImage className="custom-image" />
             <ProductTitle className="text-white" title={"Coffee"} />
             <ProductButtons className="custom-buttons" />
+
+            <button onClick={reset}>Reset</button>
           </>
         )}
       </ProductCard>
