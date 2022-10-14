@@ -30,3 +30,7 @@
 
 # Clase 84 Definir onChange 
 - Especificar el evento que se va a emitir cuando cambia el valor del input
+
+# Clase 97 State initializer
+- El patron State Initializer lo utiliza Formik
+- El patron State Initializer es una forma de inicializar el estado de un componente con valores iniciales y una forma de reestablecer el estado a su forma original.
