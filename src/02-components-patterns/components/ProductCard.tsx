@@ -14,7 +14,8 @@ const { Provider } = ProductContext;
 
 export interface Props {
   product: Product;
-  children?: React.ReactNode | React.ReactNode[];
+  //children?: React.ReactNode | React.ReactNode[];
+  children: (props: string) => JSX.Element;
   className?: string;
   style?: React.CSSProperties;
   value?: number;
@@ -29,14 +30,19 @@ export const ProductCard = ({
   style,
   value,
   onChange,
-  initialValues
+  initialValues,
 }: Props) => {
-  const { counter, increaseBy } = useProduct({ onChange, product, value, initialValues });
+  const { counter, increaseBy, maxCount } = useProduct({
+    onChange,
+    product,
+    value,
+    initialValues,
+  });
 
   return (
-    <Provider value={{ counter, increaseBy, product }}>
+    <Provider value={{ counter, increaseBy, product, maxCount }}>
       <div className={`${styles.productCard} ${className}`} style={style}>
-        {children}
+        {children("hola")}
       </div>
     </Provider>
   );
