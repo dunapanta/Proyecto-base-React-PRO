@@ -5,7 +5,6 @@ import {
   ProductCard,
 } from "../components";
 import { products } from "../data/products";
-import "../styles/custom-styles.css";
 
 const product = products[0];
 
