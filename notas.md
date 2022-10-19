@@ -41,3 +41,6 @@
 
 # Clase 110 Configuraciones
 - `peerDependency` dependencia que la persona tien que satisfacer
+
+# Clase 112 Agregar importacion por módulos
+- `peerDependency` dependencia que la persona tien que satisfacer
