@@ -7,6 +7,7 @@ import {
   Navigate,
   NavLink,
 } from "react-router-dom";
+import { RegisterPage } from "../03-forms/pages/RegisterPage";
 
 import logo from "../logo.svg";
 
@@ -19,16 +20,20 @@ export const Navigation = () => {
           <ul>
             <li>
               <NavLink
-                to="/home"
-                className={({ isActive }: any) => (isActive ? "nav-active" : "")}
+                to="/register"
+                className={({ isActive }: any) =>
+                  isActive ? "nav-active" : ""
+                }
               >
-                Home
+                Register Page
               </NavLink>
             </li>
             <li>
               <NavLink
                 to="/about"
-                className={({ isActive }: any) => (isActive ? "nav-active" : "")}
+                className={({ isActive }: any) =>
+                  isActive ? "nav-active" : ""
+                }
               >
                 About
               </NavLink>
@@ -36,7 +41,9 @@ export const Navigation = () => {
             <li>
               <NavLink
                 to="/users"
-                className={({ isActive }: any) => (isActive ? "nav-active" : "")}
+                className={({ isActive }: any) =>
+                  isActive ? "nav-active" : ""
+                }
               >
                 Users
               </NavLink>
@@ -47,7 +54,7 @@ export const Navigation = () => {
         <Routes>
           <Route path="about" element={<h1>About</h1>} />
           <Route path="users" element={<h1>Users</h1>} />
-          <Route path="home" element={<h1>Home</h1>} />
+          <Route path="register" element={<RegisterPage />} />
           <Route path="/*" element={<Navigate to="/home" replace />} />
         </Routes>
       </div>
