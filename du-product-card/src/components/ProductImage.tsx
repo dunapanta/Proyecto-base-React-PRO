@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React,{ useContext } from "react";
 
 import { ProductContext } from "./ProductCard";
 import noImage from "../assets/no-image.jpg";

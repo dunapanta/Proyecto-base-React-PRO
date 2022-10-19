@@ -44,3 +44,33 @@
 
 # Clase 112 Agregar importacion por módulos
 - `peerDependency` dependencia que la persona tien que satisfacer
+- Para css modulos e importacion de imagenes se crea el archivo `tsdx.config.js` y se agrega las siguientes importaciones
+- `yarn add -D rollup-plugin-postcss` y `yarn add -D @rollup/plugin-image`
+```
+const postcss = require('rollup-plugin-postcss');
+const images = require('@rollup/plugin-image');
+module.exports = {
+  rollup(config, options) {
+    config.plugins = [
+      postcss({ modules: true }),
+      images({ incude: ['**/*.png', '**/*.jpg'] }),
+      ...config.plugins,
+];
+    return config;
+  },
+};
+```
+
+- Agrego archivo `typings.d.ts`
+```
+declare module '*.css' {
+  const content: { [className: string]: string };
+  export default content;
+}
+
+declare module '*.jpg' {
+  const value: any;
+  export default value;
+}
+
+```
