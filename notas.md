@@ -34,3 +34,7 @@
 # Clase 97 State initializer
 - El patron State Initializer lo utiliza Formik
 - El patron State Initializer es una forma de inicializar el estado de un componente con valores iniciales y una forma de reestablecer el estado a su forma original.
+
+# Clase 109 TSDX
+- `npx tsdx create <nombre>`
+- Selecciono tempate `react`
