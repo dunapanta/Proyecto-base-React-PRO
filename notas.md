@@ -38,3 +38,6 @@
 # Clase 109 TSDX
 - `npx tsdx create <nombre>`
 - Selecciono tempate `react`
+
+# Clase 110 Configuraciones
+- `peerDependency` dependencia que la persona tien que satisfacer
