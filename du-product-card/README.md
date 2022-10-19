@@ -15,7 +15,6 @@ import { ProductCard, ProductImage, ProductTitle, ProductButtons } from 'du-prod
 ```
 <ProductCard
         initialValues={{ count: 4, maxCount: 10 }}
-        key={product.id}
         product={product}
       >
         {({ reset, count, isMaxCountReached, maxCount, increaseBy }) => (
@@ -28,4 +27,3 @@ import { ProductCard, ProductImage, ProductTitle, ProductButtons } from 'du-prod
         )}
       </ProductCard>
 ```
-
