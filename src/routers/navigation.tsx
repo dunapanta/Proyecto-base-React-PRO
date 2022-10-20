@@ -36,7 +36,7 @@ export const Navigation = () => {
                   isActive ? "nav-active" : ""
                 }
               >
-                Formic Basic
+                Formik Basic
               </NavLink>
             </li>
             <li>
