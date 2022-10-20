@@ -1,25 +1,18 @@
-import { ChangeEvent, FormEvent, useState } from "react";
+import { FormEvent } from "react";
+import { useForm } from "../hooks/useForm";
 import "../styles/styles.css";
 
 export const RegisterPage = () => {
-  const [registerData, setRegisterData] = useState({
+  const { formData, onChange, name, email, password1, password2 } = useForm({
     name: "",
     email: "",
     password1: "",
     password2: "",
   });
-  const { name, email, password1, password2 } = registerData;
-
-  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setRegisterData((prev) => ({
-      ...registerData,
-      [e.target.name]: e.target.value,
-    }));
-  };
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(registerData);
+    console.log(formData);
   };
 
   return (
