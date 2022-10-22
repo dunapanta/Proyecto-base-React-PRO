@@ -4,21 +4,36 @@
     "name": "firstName",
     "placeholder": "First Name",
     "label": "First Name",
-    "value": ""
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
   },
   {
     "type": "input",
     "name": "lastName",
     "placeholder": "Last Name",
     "label": "Last Name",
-    "value": ""
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
   },
   {
     "type": "email",
     "name": "email",
     "placeholder": "Email",
     "label": "Email",
-    "value": ""
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
   },
   {
     "type": "select",
@@ -29,6 +44,11 @@
       { "id": 1, "label": "Crash Bandicoot" },
       { "id": 2, "label": "Super Mario Bros" },
       { "id": 3, "label": "Legend of Zelda" }
+    ],
+    "validations": [
+      {
+        "type": "required"
+      }
     ]
   }
 ]
