@@ -110,7 +110,7 @@ export const Navigation = () => {
           />
           <Route path="formik-register" element={<RegisterFormikPage />} />
           <Route path="dynamic-form" element={<DynamicFormPage />} />
-          <Route path="/*" element={<Navigate to="/home" replace />} />
+         {/*  <Route path="/*" element={<Navigate to="/home" replace />} /> */}
         </Routes>
       </div>
     </BrowserRouter>

@@ -12,5 +12,23 @@
     "placeholder": "Last Name",
     "label": "Last Name",
     "value": ""
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "placeholder": "Email",
+    "label": "Email",
+    "value": ""
+  },
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "label": "Favorite Game",
+    "value": "",
+    "options": [
+      { "id": 1, "label": "Crash Bandicoot" },
+      { "id": 2, "label": "Super Mario Bros" },
+      { "id": 3, "label": "Legend of Zelda" }
+    ]
   }
 ]
