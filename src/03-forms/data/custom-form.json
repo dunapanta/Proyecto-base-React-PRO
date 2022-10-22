@@ -8,6 +8,10 @@
     "validations": [
       {
         "type": "required"
+      },
+      {
+        "type": "minLength",
+        "value": 5
       }
     ]
   },
@@ -32,6 +36,9 @@
     "validations": [
       {
         "type": "required"
+      },
+      {
+        "type": "email"
       }
     ]
   },

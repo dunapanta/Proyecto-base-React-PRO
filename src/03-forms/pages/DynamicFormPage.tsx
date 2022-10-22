@@ -18,6 +18,17 @@ for (const input of formJson) {
       schema = schema.required("This field is required");
     }
 
+    if (rule.type === "minLength") {
+      schema = schema.min(
+        (rule as any).value || 2,
+        `Must be at least ${(rule as any).value || 2} characters`
+      );
+    }
+
+    if (rule.type === "email") {
+      schema = schema.email("Email is not valid");
+    }
+
     requieredFields[input.name] = schema;
   }
 }
